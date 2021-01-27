@@ -7,6 +7,13 @@ class GreenvilleRevenue
 {
     static void Main()
     {
+    double FEE = 25.00;
+    Write("Enter the number of contestents from last year's competition... ");
+    string contenstents1 = ReadLine();
+    Write("Enter the number of contestents from this year's competition... ");
+    string contenstents2 = ReadLine();
+    WriteLine("There were {0} contestents last year and {1} contestents this year.", 
+        contestents1, contestents2);
     
     }
 }
