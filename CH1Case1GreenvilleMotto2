@@ -1,0 +1,12 @@
+// Authors: Liam and Mckenzie
+// file: GreenvilleMotto2
+// Date: 1/26/2021
+using static System.Console;
+
+class GreenvilleMotto2
+{
+    static void Main()
+    {
+    
+    }
+}
