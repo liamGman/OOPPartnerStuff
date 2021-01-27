@@ -9,11 +9,14 @@ class GreenvilleRevenue
     {
     double FEE = 25.00;
     Write("Enter the number of contestents from last year's competition... ");
-    string contenstents1 = ReadLine();
+    string contestents1 = ReadLine();
     Write("Enter the number of contestents from this year's competition... ");
-    string contenstents2 = ReadLine();
+    string contestents2 = ReadLine();
     WriteLine("There were {0} contestents last year and {1} contestents this year.", 
         contestents1, contestents2);
-    
+    double revenue = int.Parse(contestents2) * FEE;
+    WriteLine("The revenue for this years competition is: {0}", revenue.ToString("C"));
+    bool yearTwoIsBigger = double.Parse(contestents2) > double.Parse(contestents1);
+    WriteLine("It is {0} that this year has more contestents than last year.", yearTwoIsBigger);
     }
 }
