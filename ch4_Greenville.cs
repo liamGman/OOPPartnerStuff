@@ -26,6 +26,9 @@ namespace GreenvilleRevenue
 
             if (numPeopleThisYr > (numPeopleLastYr * 2))
                 Console.WriteLine("The competition is more than twice as big this year!");
+            
+            if (numPeopleThisYr > numPeopleLastYr && !(numPeopleThisYr > (numPeopleLastYr * 2))
+                Console.WriteLine("The competition is more than twice as big this year!");
 
         }
     }
