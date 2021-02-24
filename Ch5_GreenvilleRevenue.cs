@@ -17,8 +17,11 @@ namespace GreenvilleRevenue
             Console.WriteLine("How many contestants were entered in to last years competition?");
             contestantsLastYr = Console.ReadLine();
             numPeopleLastYr = Convert.ToInt32(contestantsLastYr);
-            Console.WriteLine("How many contestants were entered in to this years competition?");
-            contestantsThisYr = Console.ReadLine();
+            while(true) {
+                Console.WriteLine("How many contestants were entered into this years competition? must be between 0 and 30");
+                contestantsThisYr = Console.ReadLine();
+                //if statement to test if entered number is valid if it is use a break; to stop the loop
+            }
             numPeopleThisYr = Convert.ToInt32(contestantsThisYr);
             Console.WriteLine("Last year there were {0} contestants and this year there were {1}.", numPeopleLastYr, numPeopleThisYr);
             double revenue = numPeopleThisYr * 25;
