@@ -20,9 +20,10 @@ namespace GreenvilleRevenue
             while(true) {
                 Console.WriteLine("How many contestants were entered into this years competition? must be between 0 and 30");
                 contestantsThisYr = Console.ReadLine();
-                //if statement to test if entered number is valid if it is use a break; to stop the loop
-            }
-            numPeopleThisYr = Convert.ToInt32(contestantsThisYr);
+                numPeopleThisYr = Convert.ToInt32(contestantsThisYr);
+                if(numPeopleThisYr <= 30 && numPeopleThisYr >= 0)
+                    break;
+             }
             Console.WriteLine("Last year there were {0} contestants and this year there were {1}.", numPeopleLastYr, numPeopleThisYr);
             double revenue = numPeopleThisYr * 25;
             Console.WriteLine("The projected revenue for this year is {0}", revenue.ToString("c"));
