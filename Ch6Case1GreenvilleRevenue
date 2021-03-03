@@ -51,7 +51,7 @@ namespace GreenvilleRevenue
                 while (checking) 
                 {
                     checking = false;
-                    Console.Write("Enter the talent of the contestant: ");
+                    Console.Write("Enter the talent of the contestant(D, S, M, O): ");
                     input = Console.ReadLine();
                     switch(input)
                     {
@@ -73,7 +73,7 @@ namespace GreenvilleRevenue
                             input = "Other";
                             break;
                         default:
-                            Console.WriteLine("Invalid input, try again!");
+                            Console.WriteLine("Invalid input, please try again!");
                             checking = true;
                             break;
                     } 
@@ -81,19 +81,19 @@ namespace GreenvilleRevenue
                 talentArray[i] = input;
             }
             Console.WriteLine("Musical instrument: {0}", Convert.ToString(Mcount));
-            //Console.WriteLine("Musical instrument: ", Ocount);
-            //Console.WriteLine("Musical instrument: ", Dcount);
-            //Console.WriteLine("Musical instrument: ", Scount);
+            Console.WriteLine("Other: ", Convert.ToString(Ocount));
+            Console.WriteLine("Dancing: ", Convert.ToString(Dcount));
+            Console.WriteLine("Singing: ", Convert.ToString(Scount));
             for (int i = 0; i < namesArray.Length; i++)
             {
                 Console.WriteLine(talentArray[i]);
             }
             bool gettingTalents = true;
-            while (gettingTalents)
+            while(gettingTalents)
             {
-                Console.WriteLine("Enter a talent code or X to quite");
+                Console.WriteLine("Enter a talent code or X to quit");
                 string inputTalent = Console.ReadLine();
-                switch (inputTalent)
+                switch(inputTalent)
                 {
 
                     case "D":
