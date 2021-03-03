@@ -81,13 +81,10 @@ namespace GreenvilleRevenue
                 talentArray[i] = input;
             }
             Console.WriteLine("Musical instrument: {0}", Convert.ToString(Mcount));
-            Console.WriteLine("Other: ", Convert.ToString(Ocount));
-            Console.WriteLine("Dancing: ", Convert.ToString(Dcount));
-            Console.WriteLine("Singing: ", Convert.ToString(Scount));
-            for (int i = 0; i < namesArray.Length; i++)
-            {
-                Console.WriteLine(talentArray[i]);
-            }
+            Console.WriteLine("Other: {0}", Convert.ToString(Ocount));
+            Console.WriteLine("Dancing: {0}", Convert.ToString(Dcount));
+            Console.WriteLine("Singing: {0}", Convert.ToString(Scount));
+       
             bool gettingTalents = true;
             while(gettingTalents)
             {
