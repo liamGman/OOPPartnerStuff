@@ -1,0 +1,38 @@
+//Heather Liam and McKenzie
+using System;
+using static System.Console;
+
+class GreenvilleRevenue
+{
+    static void Main(string[] args)
+    {
+        Write("Enter a number for this years contestants: ");
+        int thisYear = GetContestants();
+        Write("Enter a number for last years contestants: ");
+        int lastYear = GetContestants();
+        DisplayContestantMessage(thisYear, lastYear);
+    }
+    private static int GetContestants()
+    {
+        int contestants = int.Parse(ReadLine());
+        return contestants;
+    }
+
+    private static void DisplayContestantMessage(int thisYear, int lastYear)
+    {
+        WriteLine("This year there were {0} contetsants", Convert.ToString(thisYear));
+        WriteLine("last year there were {0} contetsants", Convert.ToString(lastYear));
+        if (thisYear > lastYear)
+        {
+            WriteLine("There are more contestants this year than there were last year");
+        } else if (thisYear < lastYear)
+        {
+            WriteLine("There are more contestants last year than there are this year");
+        }
+        else
+        {
+            WriteLine("There are the same number of contestants this year as last year");
+        }
+    }
+
+}
