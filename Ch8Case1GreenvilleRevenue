@@ -11,6 +11,7 @@ class GreenvilleRevenue
         Write("Enter a number for last years contestants: ");
         int lastYear = GetContestants();
         DisplayContestantMessage(thisYear, lastYear);
+        ContestantNameAndTalent(thisYear);
     }
     private static int GetContestants()
     {
@@ -34,5 +35,101 @@ class GreenvilleRevenue
             WriteLine("There are the same number of contestants this year as last year");
         }
     }
+    
+    private static void ContestantNameAndTalent(int numPeopleThisYr)
+    {
+        string[] talentArray = new string[numPeopleThisYr];
+        string[] namesArray = new string[numPeopleThisYr];
+        int Ocount = 0;
+        int Mcount = 0;
+        int Scount = 0;
+        int Dcount = 0;
+        for (int i = 0; i < numPeopleThisYr; i++)
+        {
+            Console.Write("Enter the name of the contestant: ");
+            string input = Console.ReadLine();
+            namesArray[i] = input;
+            bool checking = true;
+
+            while (checking)
+            {
+                checking = false;
+                Console.Write("Enter the talent of the contestant(D, S, M, O): ");
+                input = Console.ReadLine();
+                switch (input)
+                {
+
+                    case "D":
+                        input = "Dancing";
+                        Dcount++;
+                        break;
+                    case "S":
+                        Scount++;
+                        input = "Singing";
+                        break;
+                    case "M":
+                        Mcount++;
+                        input = "Musical Instrument";
+                        break;
+                    case "O":
+                        Ocount++;
+                        input = "Other";
+                        break;
+                    default:
+                        Console.WriteLine("Invalid input, please try again!");
+                        checking = true;
+                        break;
+                }
+            }
+            talentArray[i] = input;
+        }
+
+        Console.WriteLine("Musical instrument: {0}", Convert.ToString(Mcount));
+        Console.WriteLine("Other: {0}", Convert.ToString(Ocount));
+        Console.WriteLine("Dancing: {0}", Convert.ToString(Dcount));
+        Console.WriteLine("Singing: {0}", Convert.ToString(Scount));
+
+        bool gettingTalents = true;
+        while (gettingTalents)
+        {
+            Console.WriteLine("Enter a talent code or X to quit");
+            string inputTalent = Console.ReadLine();
+            switch (inputTalent)
+            {
+
+                case "D":
+                    inputTalent = "Dancing";
+                    Dcount++;
+                    break;
+                case "S":
+                    Scount++;
+                    inputTalent = "Singing";
+                    break;
+                case "M":
+                    Mcount++;
+                    inputTalent = "Musical Instrument";
+                    break;
+                case "O":
+                    Ocount++;
+                    inputTalent = "Other";
+                    break;
+
+            }
+            if ("X" != inputTalent)
+            {
+                for (int i = 0; i < talentArray.Length; i++)
+                {
+                    if (inputTalent == talentArray[i])
+                        Console.WriteLine(namesArray[i]);
+
+
+                }
+            }
+            else
+                gettingTalents = false;
+        }
+    }
+    
+
 
 }
